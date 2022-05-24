@@ -32,15 +32,14 @@ harga_jual decimal(10,0),
 stok int(4)
 );
 ```
-format dapat diletakkan di konsol atau SQL
-<br>Ini tampilan di Konsol:
+<br>format dapat diletakkan di konsol atau SQL</br>
+<br>Ini tampilan di Konsol:</br>
 ![](foto/foto6.png)
-
 <p>Ini Tampilan di SQL:</p>
 
 ![](foto/foto7.png)
-<p>Kemudian Menambahkan Data dengan format :
 
+5. Kemudian Menambahkan Data dengan format :
 ```php
 INSERT INTO data_barang (kategori, nama, gambar, harga_beli, harga_jual, stok)
 VALUES ('Elektronik', 'HP Samsung Android', 'hp_samsung.jpg', 2000000, 2400000, 5),
@@ -49,7 +48,44 @@ VALUES ('Elektronik', 'HP Samsung Android', 'hp_samsung.jpg', 2000000, 2400000, 
 ```
 Letakkan format di SQL atau Konsol, saat ini saya meletakkan di SQL
 ![](foto/foto8.png)
-<p>Ini hasil formatnya</p>
-
+<br>Ini hasil formatnya
 ![](foto/foto9.png)
 
+6. <b>Membuat Program CRUD</b>
+<br>Saya akan membuat folder baru directory web server (d:\xampp\htdocs) dengan nama ```lab8_php_database```</br>
+![](foto/foto10.png)
+Kemudian untuk mengakses direktory tersebut pada web server dengan mengakses URL:
+http://localhost/lab8_php_database/
+![](foto/foto11.png)
+
+7. Membuat file koneksi database <br>Buat file baru di VSC dengan nama ```koneksi.php``` dengan format </br>
+```php
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "latihan1";
+$conn = mysqli_connect($host, $user, $pass, $db);
+if ($conn == false)
+{
+echo "Koneksi ke server gagal.";
+die();
+} else echo "Koneksi berhasil";
+?>
+```
+Buka melalui browser untuk menguji koneksi database (untuk menyampilkan pesan
+koneksi berhasil, uncomment pada perintah echo “koneksi berhasil”;
+![](foto/foto12.png)
+
+8. Membuat file index untuk menampilkan data (Read)<br>Buat file baru dengan nama index.php dengan format:
+```php
+<?php
+include("koneksi.php");
+// query untuk menampilkan data
+$sql = 'SELECT * FROM data_barang';
+$result = mysqli_query($conn, $sql);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+```
