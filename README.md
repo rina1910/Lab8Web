@@ -109,14 +109,14 @@ $result = mysqli_query($conn, $sql);
             <?php if($result): ?>
             <?php while($row = mysqli_fetch_array($result)): ?>
             <tr>
-                <td><img src="gambar<?= $row['gambar'];?>" alt="<?=
-$row['nama'];?>"></td>
+                <td><img src="gambar/<?= $row['gambar'];?>" alt="<?= $row['nama'];?>"></td>
                 <td><?= $row['nama'];?></td>
                 <td><?= $row['kategori'];?></td>
                 <td><?= $row['harga_beli'];?></td>
                 <td><?= $row['harga_jual'];?></td>
                 <td><?= $row['stok'];?></td>
                 <td><?= $row['id_barang'];?></td>
+                td><a href="hapus.php?id=<?php echo $d['id']; ?>">EDIT / HAPUS</a>
             </tr>
             <?php endwhile; else: ?>
             <tr>
@@ -130,4 +130,7 @@ $row['nama'];?>"></td>
 </html>
 
 ```
+Hasil format di atas seperti ini:
+![](foto/foto13.png)
 
+9. 
