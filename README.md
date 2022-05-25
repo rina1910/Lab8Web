@@ -321,5 +321,18 @@ $data['id_barang'];?>" />
 </body>
 </html>
 ```
+11. Supaya Data Dapat Dihapus (Delete)<br>Buatlah file baru dengan nama ```hapus.php``` dengan format:
+```php
+<?php
+include_once 'koneksi.php';
+$id = $_GET['id'];
+$sql = "DELETE FROM data_barang WHERE id_barang = '{$id}'";
+$result = mysqli_query($conn, $sql);
+header('location: index.php');
+?>
+```
+Ketika klik hapus pada bagian Hp Samsung Android maka data Hp Samsung Android akan menghilang tampilannya seperti ini:
+![](foto/foto15.png)
 
+# SEKIAN DAN TERIMAKASIH
 
