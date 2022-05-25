@@ -321,6 +321,9 @@ $data['id_barang'];?>" />
 </body>
 </html>
 ```
+Jika di klik ubah akan muncul seperti ini, misalkan klik ubah pada bagian data Hp Xiaomi Android maka akan muncul seperti berikut:
+![](foto/foto15.png)
+
 11. Supaya Data Dapat Dihapus (Delete)<br>Buatlah file baru dengan nama ```hapus.php``` dengan format:
 ```php
 <?php
@@ -332,7 +335,7 @@ header('location: index.php');
 ?>
 ```
 Ketika klik hapus pada bagian Hp Samsung Android maka data Hp Samsung Android akan menghilang tampilannya seperti ini:
-![](foto/foto15.png)
+![](foto/foto16.png)
 
 # SEKIAN DAN TERIMAKASIH
 
